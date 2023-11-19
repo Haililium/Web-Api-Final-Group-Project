@@ -1,0 +1,60 @@
+<div id="outPopUp" class="">
+    <div class="">
+  
+        <!--to show error alert-->
+        <div *ngIf="errormsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>{{errormsg}}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+  
+          <!--to show success alert-->
+          <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{successmsg}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+  <br><br>
+          <div align="center">
+            <img  src="https://i.pinimg.com/564x/94/84/a6/9484a68541efc9f05636264db744d5b0.jpg" style="height: 150px;">
+            <br><br>
+        <form  [formGroup]="tripForm" >
+          <div class="col-lg-4 mx-auto" >
+            <input type="text" class="form-control" formControlName="TripDate" placeholder="Trip Date">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control" formControlName="studentName" placeholder="Student Name">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="TripLocation" placeholder="Trip Location">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="TripDuration" placeholder="Trip Duration">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="Faculty" placeholder="Faculty">
+          </div>
+          <br>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="Transportation" placeholder="Transportation">
+          </div>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="NoStudents" placeholder="No Students">
+          </div>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="LectName" placeholder="Lecture Name">
+          </div>
+          <br>
+  
+          <div  align="center" class="col-lg-15 mt-2" *ngIf="!getparamid" (click)="tripinfoUpdate()">
+            <button >Confirm Update🧑‍🎓</button>
+        </div>
+  
+        </form>
+  
+      </div>
+    </div>
+  

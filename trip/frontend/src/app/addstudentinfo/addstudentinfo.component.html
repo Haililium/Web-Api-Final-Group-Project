@@ -1,0 +1,54 @@
+<div id="outPopUp" class="">
+    <div class="">
+  
+        <!--to show error alert-->
+        <div *ngIf="errormsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>{{errormsg}}</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+  
+          <!--to show success alert-->
+          <div *ngIf="successmsg" class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>{{successmsg}}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <br><br>
+          <div align="center">
+            <img  src="https://i.pinimg.com/564x/1c/40/41/1c40418eed564d8b3838480e1a961bee.jpg" style="height: 150px;">
+      <br><br>
+        <form  [formGroup]="studentinfoForm" >
+          <div  class="col-lg-4 mx-auto" >
+            <input type="text" class="form-control" formControlName="studentID" placeholder="Student ID">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control" formControlName="studentName" placeholder="Student Name">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="studentEmail" placeholder="Student Email">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="studentPhone" placeholder="Student Phone Number">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="Faculty" placeholder="Faculty">
+          </div>
+          <br>
+          <div class="col-lg-4 mx-auto">
+            <input type="text" class="form-control"  formControlName="CourseCode" placeholder="CourseCode">
+          </div>
+          <br>
+          <div align="center" class="col-lg-15 mt-2" *ngIf="!getparamid" (click)="studentinfoSubmit()">
+      <button>Add Student</button>
+          </div>
+  
+  
+  
+  
+        </form>
+  
+      </div>
+    </div>
